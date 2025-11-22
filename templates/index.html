@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sliding Tile Puzzle AI Agent</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Sliding Tile Puzzle AI Agent</h1>
+
+<div id="grid"></div>
+
+<div id="controls">
+  <button onclick="agentStep()">Next Move</button>
+  <button id="autoBtn" onclick="toggleAutoSolve()">Auto Solve</button>
+  <button onclick="newGame()">New Game</button>
+  <button onclick="resetGame()">Reset</button>
+
+
+</div>
+
+<div id="status">
+    <p>Moves: <span id="moveCount">0</span></p>
+    <p>Time: <span id="timer">0.0</span> s</p>
+</div>
+
+<div id="log"></div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
